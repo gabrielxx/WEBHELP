@@ -16,12 +16,14 @@ import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignUpComponent } from './components/pages/sign-up/sign-up.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     PagesModule,

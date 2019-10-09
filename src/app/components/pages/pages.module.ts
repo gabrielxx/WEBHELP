@@ -22,8 +22,7 @@ import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
     HeaderComponent, 
     FooterComponent,
     StarshipsComponent,
-    PeopleComponent,
-    SignUpComponent
+    PeopleComponent
   ],
 
   imports: [

@@ -17,6 +17,19 @@ export class AuthenticationService {
         errorCallback(err)
       });
   }
-  
+  onSaveUser(data, successCallback, errorCallback){
+    this.afAuth.auth.createUserWithEmailAndPassword(data.email, data.password)
+    .then((userData) => {
+      var user = this.afAuth.auth.currentUser;
+      user.updateProfile({
+        displayName: data.displayName,
+     })
+      successCallback(userData)
+    })
+    .catch(err => {
+      errorCallback(err)
+    });
+  }
+
 }
 
