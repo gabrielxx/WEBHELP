@@ -1,6 +1,6 @@
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3 class="h3 ml-5">Startships</h3>
+    <h3 class="h3 ml-5">Starships</h3>
   </div>
 </div>
 <div class="m-4 row">
@@ -11,7 +11,7 @@
     <h5 class="h5 mt-3">Cargando...</h5>
   </div>
   <div class="col-md-3 col-sm-6 p-3" *ngFor="let starship of starships">
-    <div class="card">
+    <div class="card" [routerLink]="[ '/shipDetail', getId(starship.url) ]">
       <img src="https://starwars-visualguide.com/assets/img/starships/{{getId(starship.url)}}.jpg"
         onError="this.src='/assets/img/image-not-found.png'" class="card-img-top">
       <div class="card-body">

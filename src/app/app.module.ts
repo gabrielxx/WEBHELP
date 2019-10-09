@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './components/pages/sign-up/sign-up.component';
 
+import { BarRatingModule } from  "ngx-bar-rating" ;
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SignUpComponent } from './components/pages/sign-up/sign-up.component';
     AngularFireAuthGuardModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    BarRatingModule
   ],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]

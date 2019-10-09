@@ -15,6 +15,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
+import { ShipDetailComponent } from './ship-detail/ship-detail.component';
+import { BarRatingModule } from 'ngx-bar-rating';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
     HeaderComponent, 
     FooterComponent,
     StarshipsComponent,
-    PeopleComponent
+    PeopleComponent,
+    ShipDetailComponent
   ],
 
   imports: [
@@ -32,6 +35,7 @@ import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireAuthGuardModule,
+    BarRatingModule
   ],
   exports: [
     PagesComponent

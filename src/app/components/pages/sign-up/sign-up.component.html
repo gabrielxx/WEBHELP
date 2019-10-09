@@ -14,7 +14,7 @@
       <form (ngSubmit)="onRegisterUser()" [formGroup]="formRegisterUser"  ngNativeValidate="false">
           <div class="form-group">
               <input type="text" class="form-control form-control-lg inputTrans" autocomplete="false" formControlName="displayName"
-                placeholder="Name *"
+                placeholder="Nombre *"
                 [ngClass]="{'is-invalid': !formRegisterUser.get('displayName').valid, 'is-valid': formRegisterUser.get('displayName').valid}">
               <span *ngIf="!formRegisterUser.get('displayName').valid" class="invalid-feedback">
                 Debe llena esta campo
@@ -36,11 +36,10 @@
               Debe llena esta campo
             </span>
           </div>
-          <button [disabled]="!formRegisterUser.valid" class="btn btn-lg btn-brown btn-width">Registarte</button>
+          <button [disabled]="!formRegisterUser.valid" class="btn btn-lg btn-brown btn-width">Crear Cuenta</button>
         </form>
       <div class="text-center mt-5">
-        <span>¿Aún no tienes una cuenta?</span>
-        <button class="btn btn-lg btn-dark btn-width mt-4" [routerLink]="['/login']">Inicia Sesión</button>
+        <button class="btn btn-lg btn-dark btn-width" [routerLink]="['/login']">Inicia Sesión</button>
       </div>
     </div>
   </div>

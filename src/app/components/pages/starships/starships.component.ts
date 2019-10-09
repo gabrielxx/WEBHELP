@@ -27,6 +27,7 @@ export class StarshipsComponent implements OnInit {
   }
 
   onLoadUrlStarShips(url){
+    this.starships = null;
     this._starshipsService.getStarShipsUrl(url).subscribe(data => {
       this.starships = data.results;
       this.next = data.next;
