@@ -10,7 +10,7 @@
         <span class="font-weight-bold item">Name: </span> <span class="text-dark">{{starshipDetail.name}}</span>
         <span class="font-weight-bold item">Model: </span> <span class="text-dark">{{starshipDetail.model}}</span>
         <span class="font-weight-bold item">Price: </span> <span
-          class="text-dark">{{starshipDetail.cost_in_credits}} $ </span>
+          class="text-dark">{{starshipDetail.cost_in_credits}} <span *ngIf="starshipDetail.cost_in_credits != 'unknown'">$</span> </span>
         <span class="font-weight-bold item">Manufacturer: </span><span
           class="text-dark">{{starshipDetail.manufacturer}}</span>
         <span class="font-weight-bold item">Starship Class: </span> <span
@@ -20,7 +20,7 @@
         <span class="font-weight-bold item">Consumables: </span> <span
           class="text-dark">{{starshipDetail.consumables}}</span>
         <span class="font-weight-bold item">Cargo Capacity: </span> <span
-          class="text-dark">{{starshipDetail.cargo_capacity}} TON.</span>
+          class="text-dark">{{starshipDetail.cargo_capacity}}  <span *ngIf="starshipDetail.cargo_capacity != 'unknown'">TON.</span> </span>
 
         <bar-rating [rate]="starshipDetail.hyperdrive_rating" [readOnly]="true" [max]="5" readOnly></bar-rating>
         <div class="mt-5">
