@@ -11,7 +11,10 @@ import { StarshipsService } from '../../providers/starships.service';
 import {HttpClientModule} from '@angular/common/http';
 import { PeopleComponent } from './people/people.component'
 import { PeopleService } from '../../providers/people.service';
-
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,17 @@ import { PeopleService } from '../../providers/people.service';
     HeaderComponent, 
     FooterComponent,
     StarshipsComponent,
-    PeopleComponent
+    PeopleComponent,
+    SignUpComponent
   ],
 
   imports: [
     BrowserModule,
     PAGES_ROUTES,
-    HttpClientModule
+    HttpClientModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireAuthGuardModule,
   ],
   exports: [
     PagesComponent
