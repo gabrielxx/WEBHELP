@@ -1,0 +1,34 @@
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3 class="h3 ml-5">Startships</h3>
+  </div>
+</div>
+<div class="m-4 row">
+  <div class="col-md-3 col-sm-6 p-3" *ngFor="let starship of starships">
+    <div class="card">
+      <img src="https://starwars-visualguide.com/assets/img/starships/{{getId(starship.url)}}.jpg"
+        onError="this.src='/assets/img/image-not-found.png'" class="card-img-top">
+      <div class="card-body">
+        <div class="card-text">
+          <div class="font-weight-bold text-left">
+            {{starship.name}}
+          </div>
+          <div class="font-weight-bold text-left text-muted">
+            {{starship.model}}
+          </div>
+          <div class="col-md-12 text-right  text-muted">
+            <span>
+              {{starship.cost_in_credits != 'unknown' ? '$': '' }}{{starship.cost_in_credits}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+  <button class="btn btn-light border" (click)="onLoadUrlStarShips(previous)" [disabled]="!previous"><i
+      class="fas fa-angle-left"></i> Back</button>
+  <button class="btn btn-light border" (click)="onLoadUrlStarShips(next)" [disabled]="!next">Next <i
+      class="fas fa-angle-right"></i></button>
+</div>
